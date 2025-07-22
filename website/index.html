@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natalia Almeida - Costura Criativa</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="navlinks" id="navlinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="contatos.html">Contatos</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>
+        Feito à mão <br>
+        com carinho!</h1>
+      <p>
+        Transformando tecidos em arte. Conheça meus produtos criativos e feitos sob medida para você.
+        Costura, artesanato, consertos de roupas e peças únicas para o seu dia a dia.
+      </p>
+      <a href="produtos.html" class="hero-button">Ver Produtos</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="..." alt="...">
+    </div>
+  </section>
+
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('navlinks');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>
