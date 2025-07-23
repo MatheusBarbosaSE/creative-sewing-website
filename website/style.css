@@ -143,6 +143,11 @@ body {
     display: flex;
   }
 
+  .navbar {
+    height: 60px;
+    padding: 0 5%;
+  }
+
   .navlinks {
     display: none;
     position: absolute;
@@ -181,5 +186,81 @@ body {
   .hero-image img {
     max-width: 90%;
     height: auto;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 250px 10%;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1 1 30%;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.about-image {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-quote {
+  flex: 1 1 30%;
+  color: #CD853F;
+  text-align: right;
+}
+
+.about-quote h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 5% 60px 5%;
+  }
+
+  .about-text,
+  .about-quote {
+    flex: 1 1 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+
+  .about-image {
+    flex: 1 1 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-image img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .about-quote {
+    text-align: center;
+  }
+
+  .about-quote h2 {
+    font-size: 1.5rem;
   }
 }
