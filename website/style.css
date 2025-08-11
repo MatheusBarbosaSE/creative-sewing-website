@@ -265,6 +265,7 @@ body {
   }
 }
 
+/* Products */
 #products {
   padding: 60px 20px;
   background-color: #fdfdfd;
@@ -290,29 +291,38 @@ body {
   padding-bottom: 5px;
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px;
+/* Carousel container */
+.carousel-container {
+  position: relative;
+}
+
+.product-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+.product-carousel::-webkit-scrollbar {
+  display: none; /* hide scrollbar */
 }
 
 .product-item {
+  flex: 0 0 auto;
+  width: 220px;
   text-align: center;
-  max-width: 220px;
-  margin: 0 auto;
 }
 
 .product-item img {
   width: 100%;
-  height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .product-item img:hover {
   transform: scale(1.05);
-  filter: brightness(1.05);
 }
 
 .product-item p {
@@ -322,6 +332,41 @@ body {
   font-weight: 500;
 }
 
+/* Carousel buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(244,164,96,0.9);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none; /* hidden by default, shown in desktop */
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(205,133,63,0.9);
+}
+
+.carousel-btn.prev {
+  left: -10px;
+}
+
+.carousel-btn.next {
+  right: -10px;
+}
+
+@media (min-width: 769px) {
+  .carousel-btn {
+    display: block;
+  }
+}
+
+/* Contact */
 #contact {
   display: flex;
   justify-content: space-between;
@@ -362,6 +407,11 @@ body {
 
 .contact-info a:hover {
   background-color: #CD853F;
+}
+
+.contact-info a i {
+  margin-right: 8px;
+  font-size: 1.1em;
 }
 
 .contact-form {
@@ -423,12 +473,8 @@ body {
     flex-direction: column;
     text-align: center;
   }
-  .contact-info, .contact-form {
+  .contact-info,
+  .contact-form {
     flex: 1 1 100%;
   }
-}
-
-.contact-info a i {
-  margin-right: 8px;
-  font-size: 1.1em;
 }
