@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contatos - Natalia Almeida</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="navlinks" id="navlinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="contatos.html" class="active">Contatos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="contact">
+    <div class="contact-info">
+      <h2>Vamos transformar suas ideias em costura!</h2>
+      <p>
+        Cada ponto é feito com cuidado,<br>
+        cada peça conta uma história.<br>
+        Vamos criar algo único,<br>
+        feito especialmente para você.
+      </p>
+      <a href="..." target="_blank">
+        <i class="fab fa-instagram"></i> Me siga no Instagram
+      </a>
+    </div>
+
+    <form action="..." method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="_replyto" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <!-- Load shared JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
